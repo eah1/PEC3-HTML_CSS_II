@@ -1,0 +1,140 @@
+.splash-photo {
+  height: 100vh;
+  background-image: url(../images/swedish_house_mafia_splash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    @include default-header;
+
+    font-size: 400%;
+    color: white;
+    text-shadow:
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      2px 2px 0 #000;
+
+    @include responsive(mobile) {
+      font-size: 300%;
+    }
+  }
+}
+
+.bibliography {
+  @include default-container;
+
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    @include default-header;
+
+    font-size: 200%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include responsive(mobile) {
+      font-size: 150%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__copy {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    margin: 0 auto 1rem auto;
+    list-style-type: none;
+    display: block;
+
+    &__item {
+      padding: 0.2rem;
+    }
+  }
+
+  &__quote {
+    width: 60%;
+    margin: 2rem auto;
+  }
+
+  &__figure {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include responsive(mobile) {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__photo {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+
+    @include responsive(tablet) {
+      width: 90%;
+    }
+
+    @include responsive(mobile) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__caption {
+    text-align: center;
+  }
+}
+
+.quote {
+  display: flex;
+  flex-direction: row;
+
+  @include responsive(tablet) {
+    flex-direction: column;
+  }
+
+  @include responsive(mobile) {
+    flex-direction: column;
+  }
+
+  &__author {
+    font-family: $font-family-headers;
+    font-size: 200%;
+    text-align: right;
+
+    @include responsive(tablet) {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    @include responsive(mobile) {
+      font-size: 150%;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+  }
+  &__text {
+    font-style: italic;
+    margin-left: 5rem;
+    font-size: 140%;
+
+    @include responsive(tablet) {
+      margin-left: 0;
+    }
+
+    @include responsive(mobile) {
+      margin-left: 0;
+      font-size: 100%;
+    }
+  }
+}

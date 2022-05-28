@@ -1,0 +1,72 @@
+.navigation {
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @include responsive(mobile) {
+    flex-direction: column;
+  }
+
+  &--normal {
+    border-bottom: 2px solid $default-link-color;
+  }
+
+  &--dark {
+    border-bottom: 2px solid white;
+    background-color: #c73f3f;
+  }
+
+  &__logo {
+    width: 5%;
+    margin-left: 2rem;
+
+    @include responsive(mobile) {
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    @include responsive(mobile) {
+      margin-right: 0;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    margin-right: 2rem;
+
+    @include responsive(mobile) {
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+
+  &__link--normal {
+    color: $default-link-color;
+  }
+
+  &__link--normal:visited {
+    color: $default-link-color;
+  }
+
+  &__link--dark {
+    color: white;
+  }
+
+  &__link--dark:visited {
+    color: white;
+  }
+}

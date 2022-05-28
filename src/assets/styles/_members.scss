@@ -1,0 +1,60 @@
+.band-member-list {
+  @include default-container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__header {
+    @include default-header;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @include responsive(mobile) {
+      flex-direction: column;
+    }
+  }
+}
+
+.band-member {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 2rem;
+
+  @include responsive(mobile) {
+    width: 100%;
+  }
+
+  &__photo {
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+  }
+
+  &__name {
+    text-align: center;
+    font-weight: 900;
+    font-size: 150%;
+    margin: 1rem 0;
+  }
+
+  &__role {
+    text-align: center;
+  }
+
+  &__desc {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
